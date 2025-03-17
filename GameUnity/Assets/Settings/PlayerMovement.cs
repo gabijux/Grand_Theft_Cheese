@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
     float horizontalInput;
     float moveSpeed = 5f;
     bool isFacingRight = false;
+    float jumpPower = 6f;
+    bool isJumping = false;
 
     Rigidbody2D rb;
     Animator animator;
@@ -21,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal");
         FlipSprite();
+
+        if(Input.GetButtonDown("Jump") && !isJumping)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
+            isJumping = true;
+        }
     }
     private void FixedUpdate()
     {
@@ -37,5 +45,9 @@ public class PlayerMovement : MonoBehaviour
             ls.x *= -1f;
             transform.localScale = ls;
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isJumping = false;
     }
 }
