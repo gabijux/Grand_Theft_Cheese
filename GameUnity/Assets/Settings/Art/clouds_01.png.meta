@@ -49,9 +49,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      clouds_01_0: -2530994095981893687
+      clouds_01_1: -1067512489112484373
+      clouds_01_2: -7658162417360098675
+      clouds_01_3: 7727031485643662291
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
