@@ -1,19 +1,33 @@
 using System;
+using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDamageable
 {
     float horizontalInput;
     float moveSpeed = 5f;
     bool isFacingRight = false;
     float jumpPower = 6f;
     bool isJumping = false;
+    int maxHealth=3;
+    int currentHealth=3;
+    [SerializeField] UnityEngine.UI.Image healthUI;
+    [SerializeField] Vector2 defaultOffset;
+    [SerializeField] float positionOffset;
+    [SerializeField] Canvas canvas;
+    List<UnityEngine.UI.Image> healthBar;
 
     Rigidbody2D rb;
     Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        currentHealth = maxHealth;
+        InitializeHealth();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -28,6 +42,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
             isJumping = true;
+        }
+
+        //TEMP DAMAGE CHECK
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            Damage(1);
         }
     }
     private void FixedUpdate()
@@ -49,5 +69,27 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isJumping = false;
+    }
+
+    public void Damage(int damage)
+    {
+        currentHealth -= damage;
+        Destroy(healthBar[healthBar.Count-1]);
+        healthBar.RemoveAt(healthBar.Count-1);
+    }
+
+    public void InitializeHealth()
+    {
+        healthBar = new List<UnityEngine.UI.Image>();
+        
+        int totalHearts = maxHealth;
+        for(int i=0; i < totalHearts; i++)
+        {
+        var health = Instantiate(healthUI);
+        health.transform.parent = canvas.transform;
+        health.rectTransform.position = defaultOffset + new Vector2(positionOffset*i, 0);
+        healthBar.Add(health);
+        }
+        
     }
 }
