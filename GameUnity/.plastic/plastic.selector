@@ -1,4 +1,0 @@
-repository "GameUnity/GameUnity@20067449491401@cloud"
-  path "/"
-    br "/main"
-    co "/main"
