@@ -34,4 +34,15 @@ public class Enemy : MonoBehaviour
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         rb.linearVelocity = new Vector2(moveDirection.x * speed, rb.linearVelocity.y); // Restart movement
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+        
+        if (damageable != null)
+        {
+            damageable.Damage(1);
+        }
+    }
+
 }
