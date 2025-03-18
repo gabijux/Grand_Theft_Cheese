@@ -1403,7 +1403,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.046, y: 0.007, z: 0}
-  m_LocalScale: {x: 2.0224, y: 2, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1617,6 +1617,7 @@ GameObject:
   - component: {fileID: 981126541}
   - component: {fileID: 981126540}
   - component: {fileID: 981126539}
+  - component: {fileID: 981126544}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1678,7 +1679,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1686,13 +1687,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.07, y: 0.16}
-      - {x: -0.16, y: 0.06}
-      - {x: -0.16, y: -0.14}
-      - {x: -0.14, y: -0.16}
-      - {x: 0.16, y: -0.16}
-      - {x: 0.16, y: 0.099999994}
-      - {x: 0.099999994, y: 0.16}
+    - - {x: -0.090806246, y: 0.5227717}
+      - {x: -0.16330147, y: 0.52806485}
+      - {x: -0.21318293, y: 0.40256983}
+      - {x: -0.18078852, y: 0.2757695}
+      - {x: -0.16959411, y: 0.2121684}
+      - {x: -0.2643365, y: 0.2259899}
+      - {x: -0.38641286, y: 0.20014769}
+      - {x: -0.44887972, y: 0.12056917}
+      - {x: -0.47310567, y: 0.029804118}
+      - {x: -0.52966046, y: -0.08388373}
+      - {x: -0.54635334, y: -0.17768627}
+      - {x: -0.53940547, y: -0.37712842}
+      - {x: -0.33602586, y: -0.4824943}
+      - {x: 0.05304839, y: -0.46740007}
+      - {x: 0.44075736, y: -0.4714967}
+      - {x: 0.44708124, y: -0.42723274}
+      - {x: 0.43644142, y: -0.4029693}
+      - {x: 0.4144411, y: -0.20656364}
+      - {x: 0.54476523, y: -0.020966277}
+      - {x: 0.52157974, y: 0.11775448}
+      - {x: 0.48723713, y: 0.27157387}
+      - {x: 0.34021726, y: 0.4319799}
+      - {x: 0.11422762, y: 0.54414797}
   m_UseDelaunayMesh: 0
 --- !u!50 &981126541
 Rigidbody2D:
@@ -1786,11 +1803,33 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.52, y: -0.03, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &981126544
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981126538}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2254c08bfccf65949a228837ae4d2ac0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1308239815
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b1bc9d9606c643b4aace3c01769155bd
+guid: 59b1ae1a9c6e3de47ad057d17508f320
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4378809880936050134
-    second: mouzeris_0
+      213: -6872125547093044269
+    second: mouzeris3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mouzeris_0
+      name: mouzeris3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2216dbfc975b33c0800000000000000
-      internalID: -4378809880936050134
+      spriteID: 3d3d1a9993e41a0a0800000000000000
+      internalID: -6872125547093044269
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mouzeris_0: -4378809880936050134
+      mouzeris3_0: -6872125547093044269
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
