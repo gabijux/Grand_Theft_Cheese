@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f9fa92132dc88ab478d877aa8d8988b0
+guid: 215da0018f3157040a58c0803f4d831e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2857875631248699205
-    second: fonas_0
+      213: 1244902099395578935
+    second: fonas06_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fonas_0
+      name: fonas06_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54fe2d4beb639a720800000000000000
-      internalID: 2857875631248699205
+      spriteID: 73c8c961dd7c64110800000000000000
+      internalID: 1244902099395578935
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fonas_0: 2857875631248699205
+      fonas06_0: 1244902099395578935
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
