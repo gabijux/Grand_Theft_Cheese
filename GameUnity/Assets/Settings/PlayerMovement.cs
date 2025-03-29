@@ -84,6 +84,7 @@ public class PlayerMovement : MonoBehaviour, IDamageable
 
     public void Damage(int damage)
     {
+        animator.SetTrigger("TakeDmg");
         currentHealth -= damage;
         Destroy(healthBar[healthBar.Count-1]);
         healthBar.RemoveAt(healthBar.Count-1);
