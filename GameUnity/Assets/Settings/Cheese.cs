@@ -6,6 +6,8 @@ public class Cheese : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("cheese");
+            collision.gameObject.GetComponent<PlayerMovement>().GainPoints(100);
             Destroy(gameObject);
         }
     }

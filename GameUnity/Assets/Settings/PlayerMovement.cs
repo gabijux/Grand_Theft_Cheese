@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -19,13 +21,16 @@ public class PlayerMovement : MonoBehaviour, IDamageable
     [SerializeField] Vector2 defaultOffset;
     [SerializeField] float positionOffset;
     [SerializeField] Canvas canvas;
+    [SerializeField] TMP_Text pointsUI;
     List<UnityEngine.UI.Image> healthBar;
+    public int points = 0;
 
     Rigidbody2D rb;
     Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        GainPoints(0);
         currentHealth = maxHealth;
         InitializeHealth();
         rb = GetComponent<Rigidbody2D>();
@@ -69,6 +74,12 @@ public class PlayerMovement : MonoBehaviour, IDamageable
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isJumping = false;
+
+        if (collision.gameObject.CompareTag("cheese"))
+        {
+            points += 100;
+        }
+    
     }
 
     public void Damage(int damage)
@@ -76,6 +87,8 @@ public class PlayerMovement : MonoBehaviour, IDamageable
         currentHealth -= damage;
         Destroy(healthBar[healthBar.Count-1]);
         healthBar.RemoveAt(healthBar.Count-1);
+        if(currentHealth <=  0)
+            death();
     }
 
     public void InitializeHealth()
@@ -92,4 +105,18 @@ public class PlayerMovement : MonoBehaviour, IDamageable
         }
         
     }
+
+    public void death()
+    {
+        //death
+        SceneManager.LoadScene("scene1");
+    }
+
+    public void GainPoints(int pointAmount)
+    {
+        Debug.Log("points");
+        points += pointAmount;
+        pointsUI.text = "Score: " + points;
+    }
+
 }
