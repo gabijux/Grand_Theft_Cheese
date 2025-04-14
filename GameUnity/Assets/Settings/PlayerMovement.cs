@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour, IDamageable
 
         InitializeHealth();
         GainPoints(0);
+
     }
 
 
