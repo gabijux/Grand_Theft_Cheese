@@ -58,6 +58,11 @@ public class PlayerMovement : MonoBehaviour, IDamageable
             Damage(1);
         }
     }
+    public void JumpPad()
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y + jumpPower * 1.5f);
+        isJumping = true;
+    }
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
@@ -102,10 +107,24 @@ public class PlayerMovement : MonoBehaviour, IDamageable
         {
         var health = Instantiate(healthUI);
         health.transform.parent = canvas.transform;
-        health.rectTransform.position = defaultOffset + new Vector2(positionOffset*i, 0);
+        health.rectTransform.position = defaultOffset + 
+                new Vector2(positionOffset*i, 0);
         healthBar.Add(health);
         }
         
+    }
+
+    public void AddHealth()
+    {
+        if (currentHealth < maxHealth)
+        {
+            var health = Instantiate(healthUI);
+            health.transform.parent = canvas.transform;
+            health.rectTransform.position = defaultOffset +
+                new Vector2(positionOffset * healthBar.Count - 1, 0);
+            healthBar.Add(health);
+            currentHealth++;
+        }
     }
 
     public void death()
