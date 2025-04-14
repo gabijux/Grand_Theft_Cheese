@@ -30,12 +30,14 @@ public class PlayerMovement : MonoBehaviour, IDamageable
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>(); 
         animator = GetComponent<Animator>();
-        GainPoints(0);
         currentHealth = maxHealth;
+
         InitializeHealth();
+        GainPoints(0);
     }
+
 
     // Update is called once per frame
     void Update()
@@ -79,9 +81,7 @@ public class PlayerMovement : MonoBehaviour, IDamageable
         {
             points += 100;
         }
-    
     }
-
     public void Damage(int damage)
     {
         animator.SetTrigger("TakeDmg");
