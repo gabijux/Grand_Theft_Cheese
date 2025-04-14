@@ -10,5 +10,6 @@ public class main_meniu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+        print("you quitted");
     }
 }

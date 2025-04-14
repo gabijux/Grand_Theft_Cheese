@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour, IDamageable
         GainPoints(0);
         currentHealth = maxHealth;
         InitializeHealth();
- main
+ //main
     }
 
     // Update is called once per frame
