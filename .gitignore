@@ -72,3 +72,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 /GameUnity/Logs
 *.log
+GameUnity/UserSettings/Layouts/default-6000.dwlt
