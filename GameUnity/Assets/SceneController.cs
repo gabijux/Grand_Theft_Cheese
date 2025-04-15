@@ -18,6 +18,7 @@ public class SceneController : MonoBehaviour
     }
     public void NextLevel()
     {
+        GameObject.FindObjectOfType<CheckpointCollection>().ResetCheckpoint();
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void LoadScene (string sceneName)
