@@ -1,30 +1,32 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     public float speed = 2f;
-    public float walkDistance = 1f;
+    public float walkDistance = 20f;
     private Rigidbody2D rb;
     private Vector2 moveDirection = Vector2.right;
     private Vector2 startPosition;
     private bool movingRight = true;
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         startPosition = transform.position;
     }
 
+    // Update is called once per frame
     void Update()
     {
         MoveEnemy();
     }
+
     void MoveEnemy()
     {
         rb.linearVelocity = moveDirection * speed;
         float distanceFromStart = Vector2.Distance(transform.position, startPosition);
 
-        if(distanceFromStart >= walkDistance)
+        if (distanceFromStart >= walkDistance)
         {
             // Flip direction
             movingRight = !movingRight;
@@ -40,7 +42,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
@@ -50,5 +51,4 @@ public class Enemy : MonoBehaviour
             damageable.Damage(1);
         }
     }
-
 }
