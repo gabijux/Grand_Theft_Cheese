@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed = 2f;
-    public float walkDistance = 1f;
+    public float walkDistance = 6f;
     private Rigidbody2D rb;
     private Vector2 moveDirection = Vector2.right;
     private Vector2 startPosition;
