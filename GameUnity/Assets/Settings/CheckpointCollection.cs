@@ -28,4 +28,9 @@ public class CheckpointCollection : MonoBehaviour
             currentCheckpoint = p;
         }
     }
+
+    public void ResetCheckpoint()
+    {
+        currentCheckpoint = 0;
+    }
 }
