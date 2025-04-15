@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class CrabMovement : MonoBehaviour
 {
     public float speed = 2f;
-    public float walkDistance = 1f;
+    public float walkDistance = 5f;
+
     private Rigidbody2D rb;
     private Vector2 moveDirection = Vector2.right;
     private Vector2 startPosition;
@@ -17,14 +18,16 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        MoveEnemy();
+        MoveCrab();
     }
-    void MoveEnemy()
+
+    void MoveCrab()
     {
         rb.linearVelocity = moveDirection * speed;
+
         float distanceFromStart = Vector2.Distance(transform.position, startPosition);
 
-        if(distanceFromStart >= walkDistance)
+        if (distanceFromStart >= walkDistance)
         {
             // Flip direction
             movingRight = !movingRight;
@@ -39,16 +42,4 @@ public class Enemy : MonoBehaviour
             startPosition = transform.position;
         }
     }
-
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
-
-        if (damageable != null)
-        {
-            damageable.Damage(1);
-        }
-    }
-
 }
