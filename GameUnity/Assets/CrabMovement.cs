@@ -42,4 +42,14 @@ public class CrabMovement : MonoBehaviour
             startPosition = transform.position;
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        IDamageable damageable = collision.gameObject.GetComponent<IDamageable>();
+
+        if (damageable != null)
+        {
+            damageable.Damage(1);
+        }
+    }
 }

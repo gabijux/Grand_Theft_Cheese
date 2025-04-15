@@ -9,8 +9,12 @@ public class Checkpoint : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hello.");
-        checkpointCollection.SetCheckpoint(p);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Hello.");
+
+            checkpointCollection.SetCheckpoint(p);
+        }
     }
 
 }

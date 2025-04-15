@@ -130,7 +130,8 @@ public class PlayerMovement : MonoBehaviour, IDamageable
     public void death()
     {
         //death
-        SceneManager.LoadScene("scene1");
+        string sceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName);
     }
 
     public void GainPoints(int pointAmount)
