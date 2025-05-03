@@ -159,6 +159,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -659,7 +672,29 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      3x-ezgif.com-gif-to-sprite-converter_0: -1145643376846194385
+      3x-ezgif.com-gif-to-sprite-converter_1: 8363332974132663053
+      3x-ezgif.com-gif-to-sprite-converter_10: 4523873921844951751
+      3x-ezgif.com-gif-to-sprite-converter_11: 5280636141445308973
+      3x-ezgif.com-gif-to-sprite-converter_12: 7391329411044537080
+      3x-ezgif.com-gif-to-sprite-converter_13: 1060739198818713873
+      3x-ezgif.com-gif-to-sprite-converter_14: -4936190253494888941
+      3x-ezgif.com-gif-to-sprite-converter_15: 3412764743081444117
+      3x-ezgif.com-gif-to-sprite-converter_16: -7276945772466820999
+      3x-ezgif.com-gif-to-sprite-converter_17: 4440945336049090190
+      3x-ezgif.com-gif-to-sprite-converter_18: 8536259688740662057
+      3x-ezgif.com-gif-to-sprite-converter_19: -5415184819067049331
+      3x-ezgif.com-gif-to-sprite-converter_2: -2548233830984616426
+      3x-ezgif.com-gif-to-sprite-converter_20: 9173844174202181910
+      3x-ezgif.com-gif-to-sprite-converter_21: -7431683816226675665
+      3x-ezgif.com-gif-to-sprite-converter_3: 5039343279458147697
+      3x-ezgif.com-gif-to-sprite-converter_4: -5321526493621325101
+      3x-ezgif.com-gif-to-sprite-converter_5: 1720103836890102062
+      3x-ezgif.com-gif-to-sprite-converter_6: -7868165969494572788
+      3x-ezgif.com-gif-to-sprite-converter_7: 835592296926300487
+      3x-ezgif.com-gif-to-sprite-converter_8: 8336625878489532720
+      3x-ezgif.com-gif-to-sprite-converter_9: 7790109246734978807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
