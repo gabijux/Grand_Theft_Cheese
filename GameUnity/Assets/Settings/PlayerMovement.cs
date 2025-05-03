@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour, IDamageable
     [SerializeField] float positionOffset;
     [SerializeField] Canvas canvas;
     [SerializeField] TMP_Text pointsUI;
+    [SerializeField] float fallThreshold = -10f;
     List<UnityEngine.UI.Image> healthBar;
     public int points = 0;
 
@@ -56,6 +57,12 @@ public class PlayerMovement : MonoBehaviour, IDamageable
         if(Input.GetKeyDown(KeyCode.K))
         {
             Damage(1);
+        }
+
+        //kill the player if they fall below threshold value
+        if (transform.position.y < fallThreshold)
+        {
+            death();
         }
     }
     public void JumpPad()
