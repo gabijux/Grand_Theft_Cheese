@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour, IDamageable
     bool isJumping = false;
     int maxHealth=3;
     int currentHealth=3;
+    private bool isInvincible = false;
+    private float iFrameTimer = 0f;
+    [SerializeField] float IFrame = 1f;
     [SerializeField] UnityEngine.UI.Image healthUI;
     [SerializeField] Vector2 defaultOffset;
     [SerializeField] float positionOffset;
@@ -47,14 +50,14 @@ public class PlayerMovement : MonoBehaviour, IDamageable
         horizontalInput = Input.GetAxis("Horizontal");
         FlipSprite();
 
-        if(Input.GetButtonDown("Jump") && !isJumping)
+        if (Input.GetButtonDown("Jump") && !isJumping)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
             isJumping = true;
         }
 
         //TEMP DAMAGE CHECK
-        if(Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             Damage(1);
         }
@@ -63,6 +66,30 @@ public class PlayerMovement : MonoBehaviour, IDamageable
         if (transform.position.y < fallThreshold)
         {
             death();
+        }
+
+        //Physics.Raycast(transform.position, Vector2.down, out RaycastHit2D hit, 0.1f, LayerMask.NameToLayer("ground"));
+        //Debug.Log(Physics2D.Raycast(transform.position, Vector2.down, 
+        //    2f, LayerMask.NameToLayer("ground")));
+        RaycastHit2D hit = Physics2D.Raycast(transform.position,
+            Vector2.down, 0.6f, LayerMask.GetMask("Ground"));
+
+        if (hit.collider != null)
+        {
+            isJumping = false;
+        }
+        else
+        {
+            isJumping = true;
+        }
+
+        if (isInvincible)
+        {
+            iFrameTimer -= Time.deltaTime;
+            if (iFrameTimer <= 0f)
+            {
+                isInvincible = false;
+            }
         }
     }
     public void JumpPad()
@@ -86,23 +113,21 @@ public class PlayerMovement : MonoBehaviour, IDamageable
             transform.localScale = ls;
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        isJumping = false;
-
-        if (collision.gameObject.CompareTag("cheese"))
-        {
-            points += 100;
-        }
-    }
+    
     public void Damage(int damage)
     {
+        if (isInvincible)
+            return;
         animator.SetTrigger("TakeDmg");
         currentHealth -= damage;
         Destroy(healthBar[healthBar.Count-1]);
         healthBar.RemoveAt(healthBar.Count-1);
+
         if(currentHealth <=  0)
             death();
+
+        isInvincible = true;
+        iFrameTimer = IFrame;
     }
 
     public void InitializeHealth()
@@ -112,11 +137,11 @@ public class PlayerMovement : MonoBehaviour, IDamageable
         int totalHearts = maxHealth;
         for(int i=0; i < totalHearts; i++)
         {
-        var health = Instantiate(healthUI);
-        health.transform.parent = canvas.transform;
-        health.rectTransform.position = defaultOffset + 
-                new Vector2(positionOffset*i, 0);
-        healthBar.Add(health);
+            var health = Instantiate(healthUI);
+            health.transform.parent = canvas.transform;
+            health.rectTransform.position = defaultOffset + 
+                    new Vector2(positionOffset*i, 0);
+            healthBar.Add(health);
         }
         
     }

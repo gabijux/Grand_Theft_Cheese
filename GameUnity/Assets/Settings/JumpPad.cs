@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//jumppad
 public class NewMonoBehaviourScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -7,7 +8,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerMovement>().JumpPad();
+            float diff = Vector3.Dot(collision.gameObject.transform.position, gameObject.transform.position);
+            if (diff > 17.38 && diff < 22.62)
+            {
+                collision.gameObject.GetComponent<PlayerMovement>().JumpPad();
+                Debug.Log("JumpPad");
+            }
         }
     }
 }

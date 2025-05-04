@@ -23,6 +23,7 @@ public class SceneController : MonoBehaviour
     }
     public void LoadScene (string sceneName)
     {
+        GameObject.FindObjectOfType<CheckpointCollection>().ResetCheckpoint();
         SceneManager.LoadSceneAsync(sceneName);
     }
 }
