@@ -36769,6 +36769,10 @@ PrefabInstance:
       propertyPath: pointsUI
       value: 
       objectReference: {fileID: 717989694}
+    - target: {fileID: 8033921004176948087, guid: 7baf95f1ce844724ca2ced9b557a7e56, type: 3}
+      propertyPath: fallThreshold
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 8546026260092412174, guid: 7baf95f1ce844724ca2ced9b557a7e56, type: 3}
       propertyPath: m_Name
       value: Player
