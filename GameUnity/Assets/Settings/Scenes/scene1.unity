@@ -34256,6 +34256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageBox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4566780477704387735, guid: bdfccadc5e2674a97879b3b97e8e17a2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6928446121912777738, guid: bdfccadc5e2674a97879b3b97e8e17a2, type: 3}
       propertyPath: m_LocalScale.x
       value: 17
@@ -35088,6 +35092,10 @@ PrefabInstance:
     - target: {fileID: 4566780477704387735, guid: bdfccadc5e2674a97879b3b97e8e17a2, type: 3}
       propertyPath: m_Name
       value: DamageBox (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566780477704387735, guid: bdfccadc5e2674a97879b3b97e8e17a2, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6928446121912777738, guid: bdfccadc5e2674a97879b3b97e8e17a2, type: 3}
       propertyPath: m_LocalScale.x

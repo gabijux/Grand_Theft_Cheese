@@ -8,11 +8,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            float diff = Vector3.Dot(collision.gameObject.transform.position, gameObject.transform.position);
-            if (diff > 17.38 && diff < 22.62)
+            Debug.Log("JumpPad");
+
+            float diff = collision.gameObject.transform.position.y - transform.position.y;
+            if (diff > 0.5f && diff < 5f)
             {
                 collision.gameObject.GetComponent<PlayerMovement>().JumpPad();
-                Debug.Log("JumpPad");
+                Debug.Log("JumpPad hit");
             }
         }
     }
