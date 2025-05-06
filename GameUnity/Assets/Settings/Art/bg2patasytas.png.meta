@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bg2patasytas_0: -828295885815770665
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
