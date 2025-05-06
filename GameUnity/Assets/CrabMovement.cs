@@ -6,6 +6,7 @@ public class CrabMovement : MonoBehaviour
     public float walkDistance = 5f;
 
     private Rigidbody2D rb;
+    private Animator animator;
     private Vector2 moveDirection = Vector2.right;
     private Vector2 startPosition;
     private bool movingRight = true;
@@ -13,6 +14,7 @@ public class CrabMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         startPosition = transform.position;
     }
 
@@ -50,6 +52,13 @@ public class CrabMovement : MonoBehaviour
         if (damageable != null)
         {
             damageable.Damage(1);
+
+            if (animator != null)
+            {
+                Debug.Log("Triggering Snap animation");
+                animator.SetTrigger("Snap");
+            }
+
         }
     }
 }
