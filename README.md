@@ -28,9 +28,11 @@ Projektą kūrė IFA-3/2 akademinės grupės studentai:
 
 Unity versija: 6000.0.38f1
 
-Žaidimo paleidimas:
-1. Eik į ``Build`` katalogą (``PIUnity/GameUnity/Build``)
-2. Paleisk ``GameUnity.exe`` failą
+Kaip paleisti žaidimą:
+
+1. [Parsisiųsk žaidimą čia](https://github.com/user-attachments/files/20355250/GTCgame.zip)
+2. Atsisiuntęs katalogą jį išskleisk ir nueik į katalogą ``Build``
+3. Paleisk ``GameUnity.exe`` failą
 
 Valdymas:
 
@@ -48,7 +50,6 @@ Valdymas:
 
 Kartais pagrindinio veikėjo pašokimas neveikia sklandžiai, pavyzdžiui, veikėjas gali „užstrigti“ bandydamas pašokti, kuomet yra prisilietęs prie sienos ar judančios platformos. Ši problema bus sprendžiama ateityje.
 
-Žaidimo eiga:
 
 
 
