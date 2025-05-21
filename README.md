@@ -50,6 +50,33 @@ Valdymas:
 
 Kartais pagrindinio veikėjo pašokimas neveikia sklandžiai, pavyzdžiui, veikėjas gali „užstrigti“ bandydamas pašokti, kuomet yra prisilietęs prie sienos ar judančios platformos. Ši problema bus sprendžiama ateityje.
 
+ŽAIDIMO EIGA:
+
+Žaidimas prasideda nuo pradžios ekrano:
+
+![image1](https://github.com/user-attachments/assets/3a17e312-c0da-433e-a6de-91d1d7e92906)
+
+Norint pradėti žaisti, spauskite mygtuką ``Play``. Jį paspaudus, atsidursite pirmajame lygyje, kuriame peliukas Mikis yra mieste. Pagrindinis jo priešas – žiurkė.
+
+![image2](https://github.com/user-attachments/assets/09571fec-ce53-450e-b614-f2fe24dfeca8)
+
+Kai pereisi pirmąjį lygį, jo pabaigoje esantis portalas automatiškai perkels tave į antrąjį lygį, kuriame peliukas Mikis yra paplūdimyje:
+
+![iamge3](https://github.com/user-attachments/assets/8471652e-39c4-4add-869d-30634d23b72e)
+
+Antrojo lygio pabaigoje peliukas Mikis ras trofėjų, kuris simbolizuoja žaidimo pabaigą. Tuomet pasirodys pabaigos ekranas, kuriame galima paspausti ``Play again?`` ir pradėti žaidimą nuo pradžių.
+
+![image4](https://github.com/user-attachments/assets/a2c9a98c-4102-4480-89fa-e97255dbc48c)
+
+Papildomi žaidimo lygiai bus sukurti ateityje.
+🎮
+
+
+
+
+
+
+
 
 
 
