@@ -30,7 +30,7 @@ Unity versija: 6000.0.38f1
 
 Kaip paleisti žaidimą:
 
-1. [Parsisiųsk žaidimą čia](https://github.com/user-attachments/files/20355250/GTCgame.zip)
+1. [Parsisiųsk žaidimą čia](https://github.com/gabijux/Grand_Theft_Cheese/releases/tag/v1.0)
 2. Atsisiuntęs katalogą jį išskleisk ir nueik į katalogą ``Build``
 3. Paleisk ``GameUnity.exe`` failą
 
